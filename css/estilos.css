@@ -1,0 +1,20 @@
+/*imports*/
+/*variables*/
+.sobre-mi {
+  background-color: color-bg; }
+  .sobre-mi h1 {
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 60px; }
+  .sobre-mi p {
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    padding: 30px;
+    color: white;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif; }
