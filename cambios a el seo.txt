@@ -1,0 +1,1 @@
+se agragron descripsiones, keywords en todas las paginas, el resto de cosas como titulo, icono , pocos h1 , etc ya estaban inplementados 

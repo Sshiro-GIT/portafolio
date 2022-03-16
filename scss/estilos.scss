@@ -1,16 +1,32 @@
-/*imports*/
+/*mixin*/
+@mixin btnn {
+    position:relative;
+	top:1px;
+}
+/*imports y adentro hay variables*/
 @import "colores.scss";
-/*variables*/
+/*mapa*/
+$bwscale: (
+    100: #ffffff,
+    200: #DFE3E7,
+    300: #CBCFD2,
+    400: #B3B6B9,
+    1000: 10px,
+    2000: 20px,
+    3000: 30px,
+    4000: 40px,
+    5000: 50px,
+);
 
-
+/*sobre mi page*/
 
 .sobre-mi{
     background-color: color-bg;
         h1{
-            color: $color-letra;
+            color: map-get($bwscale, 100);
             display: flex;
             justify-content: center;
-            margin: 0px;
+            margin: map-get($bwscale, 2000);
             padding: 10px;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             font-size: 60px;
@@ -25,3 +41,64 @@
             font-family: 'Times New Roman', Times, serif;
         }
 }
+
+/*botones de contacto*/
+
+.botom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 400ms;
+    -webkit-transition: 400ms;
+    -moz-transition: 400ms;
+    -ms-transition: 400ms;
+    -o-transition: 400ms;
+        :hover{
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+    }
+    button{
+        box-shadow:inset 0px 1px 0px 0px #000000;
+        background:linear-gradient(to bottom, #0e0d0d 5%, #000000 100%);
+        background-color:#000000;
+        border-radius:6px;
+        border:1px solid #ffffff;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:15px;
+        font-weight:bold;
+        padding:6px 24px;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #000000;
+        background:linear-gradient(to bottom, #000000 5%, #474747 100%);
+	    background-color:#161616;
+        @include btnn();
+    }
+}
+
+%heading {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 254, 254);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1 {
+    @extend %heading;
+    font-size: 2em;
+}
+
+h2 {
+    @extend %heading;
+    font-size: 1.5em;
+}
+
+
+
+
+
+
